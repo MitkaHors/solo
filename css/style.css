@@ -27,7 +27,7 @@ body {
     border-radius: 20px 20px 0 0;
     box-shadow: -0.781px -1.841px 22.8px 17.2px rgba(0, 0, 0, 0.29);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1.0) 5%, transparent 100%),
-    url(..//img/bg.jpg);
+    url(..//img/bg_comp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
