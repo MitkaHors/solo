@@ -1,0 +1,42 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.6), 
+        rgba($color-primary-dark, 0.6)), 
+    url(..//img/dune.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
+    clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
+
+    @include respond(phone){ 
+        -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 95%, 0 100%, 0 0);
+        clip-path: polygon(100% 0%, 100% 100%, 50% 95%, 0 100%, 0 0);
+      }
+
+    @include respond(tab-port){ 
+        -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0 100%, 0 0);
+        clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0 100%, 0 0);
+      }
+
+    &__logo-box {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+    
+    &__logo {
+        height: 15rem;
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+}

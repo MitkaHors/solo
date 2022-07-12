@@ -1,0 +1,221 @@
+.card {
+
+
+    // Functionality
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    position: relative;
+    height: 50rem;
+
+    -webkit-clip-path: polygon(0 8%, 50% 0, 100% 8%, 100% 100%, 50% 95%, 0 100%);
+    clip-path: polygon(0 8%, 50% 0, 100% 8%, 100% 100%, 50% 95%, 0 100%);
+
+    &__side {
+        font-size: 6rem;
+
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: $shadow-1;
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            transform: rotateY(-180deg);
+            
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark);
+            }
+        }
+    }
+
+
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 20rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
+        clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+            url(../img/Dune_sea.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+            url(../img/worm-back.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark),
+            url(../img/cave-2.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary-light, .85), 
+            rgba($color-secondary-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-tertiary-light, .85), 
+            rgba($color-tertiary-dark, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-fourth-light, .85), 
+            rgba($color-fourth-dark, .85));
+        }
+
+    }
+
+    &__details {
+        padding: 0;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    // FRONT SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align:center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+
+
+
+
+@include respond (tab-port) {
+
+    height: auto;
+    border-radius: 3px;
+    box-shadow: $shadow-1;
+
+    &__side {
+        font-size: 6rem;
+
+        height: auto;
+        transition: all .8s ease;
+        position: relative;
+        box-shadow: none;
+
+        &--front {
+            margin-bottom: -2rem;
+        }
+
+        &--back {
+            transform: rotateY(0);
+            -webkit-clip-path: polygon(0 8%, 50% 0, 100% 8%, 100% 100%, 50% 95%, 0 100%);
+            clip-path: polygon(0 8%, 50% 0, 100% 8%, 100% 100%, 50% 95%, 0 100%);
+        }
+    }
+
+
+
+    &:hover &__side--front {
+        transform: rotateY(0);
+    }
+
+
+    // FRONT SIDE STYLING
+    &__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 5rem;
+    }
+
+    &__price-box {
+        margin-bottom: 0rem;
+    }
+
+
+    &__price-value {
+        font-size: 4rem;
+    }
+
+
+    }
+
+}
+

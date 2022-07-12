@@ -31,13 +31,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .header-inner {
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 .header-nav {
-
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -54,6 +54,14 @@ body {
     background-color: #d97f27;
     color: #fff;
     border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .header-logo img {
+        width: 30px;
+    }
+    .header-nav {
+        justify-content: flex-end;
+    }
 }
 .header-logo img {
     margin-left: 1.5rem;
@@ -170,7 +178,7 @@ p {
 }
 .cost {
     font-family: Montserrat;
-    font-size: 65px;
+    font-size: 64px;
     color: #d97f27;
     margin: 0;
 }
