@@ -141,6 +141,7 @@ p {
 .story-button {
     display: flex;
     justify-content: center;
+    transition: all .2s;
 }
 .story-button a {
     max-width: 10rem;
