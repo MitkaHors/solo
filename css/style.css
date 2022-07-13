@@ -344,6 +344,9 @@ body {
     background-blend-mode: screen;
     -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
     clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0); }
+    @media (max-width: 56.25em) {
+      .card__picture {
+        height: 30rem; } }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/Dune_sea.jpg); }
     .card__picture--2 {
@@ -372,6 +375,9 @@ body {
       background-image: linear-gradient(to right bottom, rgba(241, 173, 70, 0.85), rgba(222, 61, 16, 0.85)); }
   .card__details {
     padding: 0; }
+    @media (max-width: 56.25em) {
+      .card__details {
+        padding: 2rem; } }
     .card__details ul {
       list-style: none;
       width: 80%;
@@ -934,7 +940,7 @@ body {
 
 .section-tours {
   background-color: #FFFBE9;
-  padding: 15rem 0 15rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -30vh; }
   @media (max-width: 56.25em) {
     .section-tours {

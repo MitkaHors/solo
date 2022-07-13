@@ -63,6 +63,10 @@
         -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
         clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
 
+        @include respond (tab-port){
+            height: 30rem;
+        }
+
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
             url(../img/Dune_sea.jpg);
@@ -77,6 +81,8 @@
             background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark),
             url(../img/cave-2.jpg);
         }
+
+
     }
 
     &__heading {
@@ -117,6 +123,11 @@
 
     &__details {
         padding: 0;
+
+        @include respond (tab-port){
+            padding: 2rem;
+        }
+        
         ul {
             list-style: none;
             width: 80%;
@@ -131,6 +142,8 @@
                 }
             }
         }
+
+
     }
 
     // FRONT SIDE STYLING
